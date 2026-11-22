@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fcfcfc" />
+  <meta name="description" content="Maxim Sitov — Product Designer with 10+ years of experience designing complex digital products." />
+  <title>Maxim Sitov — Product Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skipLink">Skip to content</a>
+  <div class="site">
+    <header class="site-header" id="top">
+      <div class="site-header__social" id="social-links" aria-label="Social links"></div>
+      <a class="mobile-logo" href="#top" aria-label="Maxim Sitov, top of page">Maxim Sitov<span class="mobile-logo__dot">.</span></a>
+      <nav class="site-header__nav" aria-label="Primary navigation">
+        <span class="nav-link nav-link--pending" data-i18n="navCv" title="CV link to be added">CV</span>
+        <a class="nav-link" href="#work" data-i18n="navWork">Selected Work</a>
+        <a class="nav-link" href="#experience" data-i18n="navExperience">Experience</a>
+        <a class="nav-link" href="#about" data-i18n="navAbout">About</a>
+        <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Switch to Russian">EN</button>
+      </nav>
+      <div class="mobile-actions">
+        <button class="lang-toggle lang-toggle--mobile" type="button" id="lang-toggle-mobile" aria-label="Switch to Russian">EN</button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <div class="mobile-nav__primary">
+        <a href="#work" data-i18n="navWork">Selected Work</a>
+        <a href="#experience" data-i18n="navExperience">Experience</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+      </div>
+      <div class="mobile-nav__social" id="mobile-social-links"></div>
+    </nav>
+
+    <main id="main">
+      <section class="hero" id="about" aria-labelledby="hero-title">
+        <div class="hero__portrait-wrap">
+          <img src="./assets/maxim.png" alt="Portrait of Maxim Sitov" class="hero__portrait" width="124" height="124" />
+        </div>
+        <div class="content-container hero__content">
+          <h1 class="hero__title" id="hero-title"></h1>
+          <p class="hero__subtitle" id="hero-subtitle"></p>
+          <ul class="expertise-tags" id="expertise-tags" aria-label="Areas of expertise"></ul>
+        </div>
+      </section>
+
+      <section class="work section" id="work" aria-labelledby="work-title">
+        <div class="content-container section-heading section-heading--work">
+          <h2 class="section-heading__title" id="work-title" data-i18n="workTitle">Selected Work</h2>
+          <p class="section-heading__subtitle" data-i18n="workSubtitle">Shipped products, early concepts, and design explorations across different industries.</p>
+        </div>
+        <div class="work__desktop" id="desktop-projects" aria-label="Selected projects"></div>
+        <div class="work__mobile">
+          <div class="work-carousel" id="work-carousel" tabindex="0" aria-label="Swipe through selected projects"></div>
+          <div class="carousel-bottom-row">
+            <div class="carousel-counter" id="carousel-counter" aria-live="polite">01 / 11</div>
+            <div class="carousel-arrows">
+              <button type="button" id="carousel-prev" aria-label="Previous project" class="carousel-arrow">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button type="button" id="carousel-next" aria-label="Next project" class="carousel-arrow">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+          <button id="view-all" class="view-all" type="button" aria-expanded="false" aria-controls="mobile-all-projects"><span id="view-all-label">View all projects</span><span class="view-all__icon" aria-hidden="true">↗</span></button>
+          <div id="mobile-all-projects" class="mobile-all-projects" hidden></div>
+        </div>
+      </section>
+
+      <section class="experience section" id="experience" aria-labelledby="experience-title">
+        <div class="content-container">
+          <div class="section-heading section-heading--inset">
+            <h2 class="section-heading__title" id="experience-title" data-i18n="experienceTitle">10+ years<br />of design experience.</h2>
+            <p class="section-heading__subtitle" data-i18n="experienceSubtitle">Over the years, I've worked with startups, product teams, and international companies, designing everything from early concepts to complex digital platforms.</p>
+          </div>
+          <div class="experience__list" id="experience-list"></div>
+        </div>
+      </section>
+
+      <section class="reviews section" id="reviews" aria-labelledby="reviews-title">
+        <div class="content-container">
+          <div class="section-heading section-heading--inset">
+            <h2 class="section-heading__title" id="reviews-title" data-i18n="reviewsTitle">From people<br />I've worked with.</h2>
+            <p class="section-heading__subtitle" data-i18n="reviewsSubtitle">A few words from colleagues and people I've had the chance to collaborate with over the years.</p>
+          </div>
+          <div class="reviews__list" id="reviews-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Maxim Sitov</span>
+      <a href="mailto:sitov.maxim@gmail.com">sitov.maxim@gmail.com <span aria-hidden="true">↗</span></a>
+      <a href="#top" data-i18n="backTop">Back to top ↑</a>
+    </footer>
+  </div>
+</body>
+</html>
